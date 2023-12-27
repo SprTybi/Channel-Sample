@@ -4,9 +4,8 @@ using System.Threading.Channels;
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
-
         services.AddHostedService<ReaderOneBackgroundService>();
-        services.AddSingleton(Channel.CreateBounded<string>(new BoundedChannelOptions(2)
+        services.AddSingleton(Channel.CreateBounded(new BoundedChannelOptions(2)
         {
             //Capacity = 2, // ظرفیت صف . در اینجا تعریف میکنیم یا در خط بالا در کانستراکتور اپشن مقدار دهس میکنیم
             FullMode = BoundedChannelFullMode.Wait,  //رفتار پرودیوسر وقتی میبینه کیو پر هست
@@ -21,7 +20,7 @@ IHost host = Host.CreateDefaultBuilder(args)
 
 var channel = host.Services.GetService<Channel<string>>();
 
-await Task.Run(async () => 
+Task.Run(async () => 
 {
     for (int i = 0; i < 100; i++)
     {

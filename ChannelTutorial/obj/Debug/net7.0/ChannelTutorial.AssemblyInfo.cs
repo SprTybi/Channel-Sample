@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ChannelTutorial")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+645b6b405ba5c7f08819d82543c1cedce77b57c4")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChannelTutorial")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChannelTutorial")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
